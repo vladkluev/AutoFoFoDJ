@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8.9)
+set (CMAKE_CXX_STANDARD 11)
+project (AutoFofoDJ)
+include_directories(include)
+#file(GLOB EXECS "src/*/exec/*.cpp")
+#file(GLOB SOURCES "src/*.cpp")
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+message("fuck bitches")
+message("${SOURCES}")
+add_executable(HelloWorld hello_world.cpp)
+#add_executable(testStuff ${EXECS}
+add_executable(testStuff ${SOURCES})
